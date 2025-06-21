@@ -1,0 +1,7 @@
+# Placeholder for image assets
+# This directory should contain:
+# - sky.png (background)
+# - ground.png (platform)
+# - star.png (collectible)
+# - bomb.png (enemy)
+# - dude.png (player spritesheet) 

@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Always answering questions in Chinese.
+Generate commit message in English.
+All comments in the code must be written in English. Ensure that any generated code includes comments in English.
+When generating a git commit message, only describe the changes in the code and the implementation of the functionality, using concise language.
+When implementing similar functions in multiple projects, ensure that the generated git commit message format information remains consistent.
+First Principles Thinking : When analyzing problems, technical architecture, and code module combinations, adhere to "First Principles Thinking."
+Coding Principles : When coding, adhere to the "DRY (Don't Repeat Yourself) Principle," "KISS (Keep It Simple, Stupid) Principle," "SOLID Principles," and "YAGNI (You Ain't Gonna Need It) Principle."
+Code Decomposition : If a single class, function, or code file exceeds 500 lines, identify, decompose, and separate it. During the process of identification, decomposition, and separation, adhere to the principles mentioned above.
+
+

@@ -1,0 +1,79 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Physics Game Debugging Rules
+
+## 1. Problem Identification Rules
+- **Define the specific issue**: Identify which two objects have interaction problems
+- **Start with simplest causes**: Physics properties → Collision callbacks → Complex logic
+- **Change one variable at a time**: Don't modify multiple physics properties simultaneously
+
+## 2. Physics Engine Usage Rules
+- **Keep bounce values reasonable**: Usually between 0.1-1.5, values over 2 often cause anomalies
+- **Same-type collisions need callbacks**: Objects of same type (e.g., bomb-to-bomb) usually need custom handling
+- **Avoid conflicts between manual control and physics engine**: Don't use physics engine and manual velocity setting in same frame
+- **Use engine defaults first, then add special logic**: Don't start with complex manual control
+
+## 3. Debugging Priority Order
+1. Check basic physics properties (bounce, mass, friction)
+2. Verify collision callback functions are correct
+3. Check if multiple systems are fighting for control
+4. Only consider complex manual control as last resort
+
+## 4. Code Organization Rules
+- **Separate concerns**: Handle ground collisions, object-to-object collisions, and boundary collisions separately
+- **Avoid complex physics calculations in update loops**: Prefer collision callbacks
+- **Maintain consistency in physics settings**: Same type objects should have similar physics properties
+
+## 5. Testing Rules
+- **Test each collision type separately**: Test object-to-ground first, then object-to-object
+- **Gradually increase complexity**: Start with single object, then add multiple objects
+- **Document each modification**: Avoid repeating the same mistakes
+
+## 6. Common Error Patterns
+### ❌ Wrong Approaches:
+- Setting bounce values too high (>2.0)
+- Forcing velocity in update loop, overriding physics calculations
+- Multiple systems controlling the same object simultaneously
+- Missing collision callbacks for same-type object collisions
+
+### ✅ Correct Approaches:
+- Use reasonable physics property values
+- Let physics engine handle most calculations
+- Handle special logic in collision callbacks
+- Separate different types of collision handling
+
+## 7. Real-World Case Study
+Based on Star Catcher game bomb collision issue:
+
+**Problem**: Bombs stick together after collision, separate after a few seconds
+
+**Root Causes**:
+1. `setBounce(2)` - bounce value too high causing physics calculation anomalies
+2. Missing bomb-to-bomb collision callback for separation logic
+
+**Solution**:
+1. Reduce bounce value to reasonable range `setBounce(1)`
+2. Add collision callback to calculate separation force
+3. Remove complex manual physics control
+
+**Lesson Learned**: Check basic physics settings first, don't immediately write complex solutions
+
+## 8. Physics Engine Best Practices
+- **Gravity**: Usually 300-800, adjust based on game feel
+- **Bounce**: 0.1-1.5 for most objects, 0 for no bounce
+- **Mass**: Keep relative to object size, avoid extreme values
+- **Friction**: 0.1-0.9, affects sliding behavior
+- **Restitution**: Related to bounce, affects energy conservation
+
+## 9. Collision Detection Tips
+- Use appropriate body shapes (rectangle, circle) for collision accuracy
+- Set body size correctly with `setSize()` or `setCircle()`
+- Enable debug physics to visualize collision bodies
+- Test collision boundaries thoroughly
+
+---
+
+*Based on H5 game development practice and real debugging experience* 

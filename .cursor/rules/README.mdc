@@ -1,0 +1,77 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Development Rules Documentation
+
+This folder contains development rules and guidelines based on H5 game development practice.
+
+## File Structure
+
+### 📋 [development-problem-solving-rules.mdc](mdc:development-problem-solving-rules.mdc)
+**Development Problem-Solving Rules**
+- Core principle: Simplicity first
+- Systematic problem-solving methods
+- Guidance to avoid over-complication
+- Lessons learned from actual debugging experience
+
+### 🎮 [physics-game-debugging-rules.mdc](mdc:physics-game-debugging-rules.mdc)
+**Physics Game Debugging Rules**
+- Physics engine best practices
+- Common physics problem debugging methods
+- Specific Star Catcher game debugging case studies
+- Physics property configuration guidelines
+
+### 💻 [code-quality-guidelines.mdc](mdc:code-quality-guidelines.mdc)
+**Code Quality Guidelines**
+- Clean code principles
+- SOLID design principles
+- KISS and YAGNI principles
+- Code organization and maintenance standards
+- Game development specific rules
+
+### 👤 [user-rules.mdc](mdc:user-rules.mdc)
+**User-Specific Rules**
+- Language preferences and coding standards
+- Commit message format requirements
+- General development principles
+
+## Usage Guidelines
+
+### When Developing New Features
+1. Read `development-problem-solving-rules.mdc` to understand the correct problem-solving approach
+2. Reference `code-quality-guidelines.mdc` to ensure code quality
+3. If involving physics engine, refer to `physics-game-debugging-rules.mdc`
+
+### When Debugging Issues
+1. Prioritize `development-problem-solving-rules.mdc` for systematic debugging methods
+2. For physics-related issues, refer to specific guidance in `physics-game-debugging-rules.mdc`
+3. Ensure modified code meets standards in `code-quality-guidelines.mdc`
+
+### During Code Reviews
+Use the checklist in `code-quality-guidelines.mdc` to ensure code quality
+
+## Core Philosophy
+
+> **Simplicity First**: Always choose the simplest, most direct solution
+
+> **Systematic Thinking**: Analyze and solve problems methodically
+
+> **Continuous Improvement**: Learn and summarize from each practice
+
+## Implementation Notes
+
+### Language Standards
+- All code comments must be in English
+- Documentation can be bilingual for better understanding
+- Commit messages should be in English
+
+### Integration with Development Workflow
+- These rules are integrated into the workspace configuration
+- They guide both manual development and AI-assisted coding
+- Regular review and updates based on project experience
+
+---
+
+These rules are based on real H5 game development experience, particularly lessons learned from solving bomb collision issues in the Star Catcher game. Following these rules will help avoid common development pitfalls and improve development efficiency and code quality. 

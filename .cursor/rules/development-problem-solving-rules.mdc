@@ -1,0 +1,63 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Development Problem-Solving Rules
+
+## Core Principle: Simplicity First
+**Always use the simplest, most direct, and systematic approach to solve problems. Avoid complex solutions.**
+
+## Primary Rules
+
+### 1. Start Simple, Stay Simple
+- Begin with the most straightforward solution that could possibly work
+- Only add complexity when simple solutions are proven insufficient
+- Prefer standard library/framework methods over custom implementations
+- Use built-in features before writing custom logic
+
+### 2. Systematic Problem-Solving Approach
+- **Identify**: Clearly define what the problem actually is
+- **Isolate**: Test components individually before testing them together
+- **Iterate**: Make one small change at a time
+- **Validate**: Verify each change works before moving to the next
+
+### 3. Avoid Premature Complexity
+- Don't anticipate problems that don't exist yet
+- Don't optimize until you have a working solution
+- Don't add "smart" features until basic functionality is solid
+- Resist the urge to show off technical skills with complex solutions
+
+### 4. Debug Systematically
+- Check the most obvious causes first
+- Verify basic configurations before diving into complex logic
+- Use elimination method: remove complexity until the problem disappears
+- Document what doesn't work to avoid repeating mistakes
+
+### 5. Code Organization Principles
+- Write code that does one thing well
+- Separate concerns clearly
+- Use descriptive names over clever tricks
+- Make the code readable for your future self
+
+## Red Flags (When You're Overcomplicating)
+- ❌ Writing custom physics when framework physics would work
+- ❌ Manual calculations when built-in methods exist
+- ❌ Complex state management for simple interactions
+- ❌ Multiple systems doing the same job
+- ❌ "Clever" solutions that require extensive comments
+
+## Green Flags (Simple Approach)
+- ✅ Using framework defaults first
+- ✅ Single responsibility for each function/class
+- ✅ Clear, linear problem-solving steps
+- ✅ Minimal code that achieves the goal
+- ✅ Solutions that are easy to test and debug
+
+## Remember: 
+**"The best code is the code you don't have to write."**
+**"Simple is better than complex. Complex is better than complicated."**
+
+---
+
+*Generated from lessons learned during H5 game development - specifically the bomb collision debugging experience.* 

@@ -1,0 +1,141 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Code Quality Guidelines
+
+## Clean Code Rules
+
+### 1. Line Length Standards
+- Keep each line of code under 100 characters
+- Break long lines at logical points for better readability
+- Use line continuation for long function calls and expressions
+- Indent continuation lines appropriately
+
+### 2. Constants Over Magic Numbers
+- Replace hard-coded values with named constants
+- Use descriptive constant names that explain the value's purpose
+- Keep constants at the top of the file or in a dedicated constants file
+
+### 3. Meaningful Names
+- Variables, functions, and classes should reveal their purpose
+- Names should explain why something exists and how it's used
+- Avoid abbreviations unless they're universally understood
+
+### 4. Smart Comments
+- Don't comment on what the code does - make the code self-documenting
+- Use comments to explain why something is done a certain way
+- Document APIs, complex algorithms, and non-obvious side effects
+
+### 5. Single Responsibility
+- Each function should do exactly one thing
+- Functions should be small and focused
+- If a function needs a comment to explain what it does, it should be split
+
+## Code Organization Principles
+
+### 6. DRY (Don't Repeat Yourself)
+- Extract repeated code into reusable functions
+- Share common logic through proper abstraction
+- Maintain single sources of truth
+
+### 7. Clean Structure
+- Keep related code together
+- Organize code in a logical hierarchy
+- Use consistent file and folder naming conventions
+
+### 8. Encapsulation
+- Hide implementation details
+- Expose clear interfaces
+- Move nested conditionals into well-named functions
+
+## Quality Maintenance
+
+### 9. Code Quality Maintenance
+- Refactor continuously
+- Fix technical debt early
+- Leave code cleaner than you found it
+- Check to ensure correctness when generating code
+
+### 10. Version Control
+- Write clear commit messages
+- Make small, focused commits
+- Use meaningful branch names
+
+## SOLID Principles
+
+### S - Single Responsibility Principle
+- Each class should have only one reason to change
+- A class should only be responsible for one functionality
+
+### O - Open/Closed Principle
+- Open for extension, closed for modification
+- Implement extensions through inheritance and interfaces
+
+### L - Liskov Substitution Principle
+- Subclasses should be substitutable for their parent classes
+- Don't change the behavioral contract of the base class
+
+### I - Interface Segregation Principle
+- Don't force classes to implement interfaces they don't use
+- Multiple specific interfaces are better than one general interface
+
+### D - Dependency Inversion Principle
+- High-level modules should not depend on low-level modules
+- Both should depend on abstractions
+
+## Other Important Principles
+
+### KISS Principle (Keep It Simple, Stupid)
+- Keep it simple
+- Simple solutions are usually the best
+- Avoid over-engineering
+
+### YAGNI Principle (You Ain't Gonna Need It)
+- You aren't gonna need it
+- Don't write code for hypothetical requirements
+- Only implement what you currently need
+
+## Code Decomposition Rules
+If a single class, function, or code file exceeds 500 lines:
+1. **Identify**: Find logical blocks that can be separated
+2. **Decompose**: Split by functional responsibility
+3. **Separate**: Create independent modules or classes
+4. **Follow**: Adhere to the above principles throughout the process
+
+## Game Development Specific Rules
+
+### Performance Considerations
+- Avoid object creation in game loops (update/render)
+- Use object pooling for frequently created/destroyed objects
+- Cache expensive calculations outside of loops
+- Minimize DOM manipulations in web games
+
+### Game State Management
+- Separate game logic from rendering logic
+- Use state machines for complex game states
+- Keep game data serializable for save/load functionality
+- Handle pause/resume gracefully
+
+### Asset Management
+- Load assets efficiently (preload critical assets)
+- Use appropriate file formats for different asset types
+- Implement fallbacks for missing assets
+- Consider memory usage for large assets
+
+## Quality Checklist
+- [ ] Code lines under 100 characters
+- [ ] No magic numbers, use named constants
+- [ ] Function and variable names clearly express intent
+- [ ] Comments explain "why" not "what"
+- [ ] Each function does one thing
+- [ ] No duplicate code
+- [ ] Clear code structure with logical layering
+- [ ] Follows SOLID principles
+- [ ] Single file under 500 lines
+- [ ] Game-specific performance considerations addressed
+
+---
+
+*Following these rules will help maintain a high-quality, maintainable codebase* 
